@@ -8,9 +8,21 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
+    <button id="btnJSONP">JSONP</button>
     <button id="btnGET">GET</button>
     <button id="btnPOST">POST</button>
+    <button id="btnDELETE">DELETE</button>
     <script>
+      $("#btnJSONP").on("click", function () {
+        $.ajax({
+          type: "GET",
+          url: "http://127.0.0.1/api/jsonp",
+          dataType: "jsonp",
+          success: (res) => {
+            console.log(res);
+          },
+        });
+      });
       $("#btnGET").on("click", function () {
         $.ajax({
           type: "GET",
@@ -30,6 +42,19 @@
           url: "http://127.0.0.1/api/post",
           data: {
             name: "6666",
+            age: 55,
+          },
+          success: (res) => {
+            console.log(res);
+          },
+        });
+      });
+      $("#btnDELETE").on("click", function () {
+        $.ajax({
+          type: "DELETE",
+          url: "http://127.0.0.1/api/delete",
+          data: {
+            name: "1111",
             age: 55,
           },
           success: (res) => {

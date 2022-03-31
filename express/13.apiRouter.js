@@ -20,4 +20,13 @@ router.post("/post", (req, res) => {
   });
 });
 
+router.delete("/delete", (req, res) => {
+  const body = req.body;
+  res.send({
+    status: 0,
+    data: body,
+    msg: "DELETE请求成功",
+  });
+});
+
 module.exports = router;
