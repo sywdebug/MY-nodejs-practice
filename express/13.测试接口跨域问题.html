@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <button id="btnGET">GET</button>
+    <button id="btnPOST">POST</button>
+    <script>
+      $("#btnGET").on("click", function () {
+        $.ajax({
+          type: "GET",
+          url: "http://127.0.0.1/api/get",
+          data: {
+            name: "sywdebug",
+            age: 20,
+          },
+          success: (res) => {
+            console.log(res);
+          },
+        });
+      });
+      $("#btnPOST").on("click", function () {
+        $.ajax({
+          type: "POST",
+          url: "http://127.0.0.1/api/post",
+          data: {
+            name: "6666",
+            age: 55,
+          },
+          success: (res) => {
+            console.log(res);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

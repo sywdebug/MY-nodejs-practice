@@ -1,0 +1,11 @@
+{
+  "name": "sywtools",
+  "version": "1.1.1",
+  "description": "测试，内含sayHello、sayHi、sayBye方法",
+  "main": "index.js",
+  "keywords": [
+    "syw"
+  ],
+  "author": "sywdebug",
+  "license": "ISC"
+}
